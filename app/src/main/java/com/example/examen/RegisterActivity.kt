@@ -23,7 +23,9 @@ class RegisterActivity : AppCompatActivity() {
     private fun updateUi(model: RegisterViewModel.UiModel?) {
         loading_progress_bar.visibility = if ( model is RegisterViewModel.UiModel.Loading) View.VISIBLE else View.GONE
         when ( model ) {
-            is RegisterViewModel.UiModel.Register -> validateRegister(model.success)        }    }
+            is RegisterViewModel.UiModel.Register -> validateRegister(model.success)
+        }
+    }
     private fun validateRegister( resp: Boolean) {
         var message="Registro fallido"
 
